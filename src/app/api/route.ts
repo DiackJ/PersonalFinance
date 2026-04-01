@@ -1,7 +1,7 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
+//import type { NextApiRequest, NextApiResponse } from 'next';
 //import { prisma } from '@/lib/prisma';
 
 
-export async function GET(req: NextApiRequest, res:NextApiResponse) {
-    return Response.json("i work");
+export async function GET() {
+    return Response.json("i work", {status: 200});
 }
