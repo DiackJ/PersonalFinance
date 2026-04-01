@@ -2,6 +2,6 @@
 //import { prisma } from '@/lib/prisma';
 
 
-export async function GET() {
-    return Response.json("i work", {status: 200});
+export async function GET(request: Request) {
+    return Response.json({message: "i work"}, {status: 200});
 }
