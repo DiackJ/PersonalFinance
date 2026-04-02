@@ -1,26 +1,57 @@
 @import "tailwindcss";
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Public Sans';
+    src: url('/public/fonts/Public_Sans/PublicSans-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Public Sans';
+    src: url('/public/fonts/Public_Sans/PublicSans-Italic-VariableFont_wght.ttf') format(truetype);
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+    --backround-color: #FFFFF0;
+    --nav-bar-color: #3B3C36;
+    --nav-text-color: #B2B59C;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+    --color-green:         #277C78;
+    --color-yellow:        #F2CDAC;
+    --color-cyan:          #82C9D7;
+    --color-navy:          #626070;
+    --color-red:           #C94736;
+    --color-purple:        #826CB0;
+    --color-turquoise:     #597C7C;
+    --color-brown:         #93674F;
+    --color-magenta:       #934F6F;
+    --color-blue:          #3F82B2;
+    --color-navy-grey:     #97A0AC;
+    --color-army-green:    #7F9161;
+    --color-gold:          #CAB361;
+    --color-orange:        #BE6C49;
+    --white: #FFFFFF;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    --main-text-color:      #201F24;
+    --secondary-text-color: #696868;
+    --color-grey-300:      #B3B3B3;
+    --color-grey-100:      #F2F2F2;
+
+    --font-family: 'Public Sans';
+    --title-font: 32px;
+    --second-font: 20px;
+    --third-font: 16px;
+    --fourth-button-font: 14px;
+    --fifth-font: 12px;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--backround-color);
+  font-family: var(--font-family), sans-serif;
 }

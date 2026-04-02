@@ -3,5 +3,5 @@
 
 
 export async function GET() {
-   return new Response("i work");
+   return Response.json("i work");
 }
