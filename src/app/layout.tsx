@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import NavBar from '../ui-components/NavBar';
+import SideNavBar from '../ui-components/SideNavBar';
+import BottomNavBar from '../ui-components/BottomNavBar';
 
 export const metadata: Metadata = {
   title: "Personal Finance App",
@@ -12,13 +13,21 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
+  const isActivePage:boolean = false;
+
   return (
     <html
       lang="en"
       className={`text-(--font-family) h-full antialiased bg-(--background-color)`}
     >
       <body className="min-h-full">
-        <NavBar />
+        <div className={`hidden md:block`}>
+          <SideNavBar />
+        </div>
+        <div className={`block md:hidden`}>
+          <BottomNavBar isActive={isActivePage}/>
+        </div>
         {children}
       </body>
     </html>

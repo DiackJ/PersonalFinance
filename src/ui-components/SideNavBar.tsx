@@ -2,7 +2,7 @@
 import clsx from "clsx";
 import { useState } from "react";
 
-export default function NavBar() {
+export default function SideNavBar() {
     const [isExpanded, setIsExpanded] = useState<boolean>(false);
     const handleExpandNav = () => {
         setIsExpanded(prev => !prev);
