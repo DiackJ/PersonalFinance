@@ -9,13 +9,13 @@
     font-display: swap;
 }
 
-@font-face {
-    font-family: 'Public Sans';
-    src: url('/public/fonts/Public_Sans/PublicSans-Italic-VariableFont_wght.ttf') format(truetype);
-    font-weight: 100 900;
-    font-style: italic;
-    font-display: swap;
-}
+/*@font-face {*/
+/*    font-family: 'Public Sans';*/
+/*    src: url('/public/fonts/Public_Sans/PublicSans-Italic-VariableFont_wght.ttf') format(truetype);*/
+/*    font-weight: 100 900;*/
+/*    font-style: italic;*/
+/*    font-display: swap;*/
+/*}*/
 
 :root {
     --background-color: #F6F4F4;
@@ -52,7 +52,16 @@
     --fifth-font: 12px;
 }
 
+@theme {
+    --color-main: var(--main-text-color);
+    --color-secondary: var(--secondary-text-color);
+    --color-grey-one: var(--color-grey-300);
+    --color-grey-two: var(--color-grey-100);
+}
+
 body {
-  background: var(--backround-color);
+  background: var(--background-color);
   font-family: var(--font-family), sans-serif;
 }
+
+/*#201F24*/

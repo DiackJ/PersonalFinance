@@ -27,8 +27,8 @@ const path = usePathname();
                           />
                     }
                 </div>
-                <div className={`flex flex-col font-semibold absolute top-1/4 ${!isExpanded ? "left-3 w-9" : "left-2 w-44"}`}>
-                    <Link href="/overview" className={`inline-flex ${path === "/overview" && `bg-[#F6F4F4] py-4 w-full -ml-2 rounded-r-lg border-l-[#72090F] border-l-6`}`}>
+                <div className={`flex flex-col font-semibold mt-26 ${!isExpanded ? "ml-2 w-10" : "ml-2 w-44"}`}>
+                    <Link href="/overview" className={`inline-flex ${path === "/overview" && `bg-[#F6F4F4] py-4 pr-2 w-full -ml-2 rounded-r-lg border-l-[#72090F] border-l-6`}`}>
                         <img src="/icons/icon-overview.svg" alt="home icon" className={`${isExpanded ? "pl-2" : "pl-1"}`}/>
                         {isExpanded && <p className={`pl-2`}>Overview</p>}
                     </Link>

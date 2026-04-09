@@ -14,21 +14,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const isActivePage:boolean = false;
-
   return (
     <html
       lang="en"
-      className={`text-(--font-family) h-full antialiased bg-(--background-color)`}
+      className={`text-(--font-family) bg-(--background-color)`}
     >
-      <body className="min-h-full">
+      <body className="flex">
         <div className={`hidden md:block`}>
           <SideNavBar />
         </div>
+        <main className={`ml-6 md:ml-16`}>{children}</main>
         <div className={`block md:hidden`}>
-          <BottomNavBar isActive={isActivePage}/>
+          <BottomNavBar />
         </div>
-        {children}
       </body>
     </html>
   );
