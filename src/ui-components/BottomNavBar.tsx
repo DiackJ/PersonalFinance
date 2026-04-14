@@ -9,7 +9,7 @@ export default function BottomNavBar() {
 
     return (
       <div>
-          <nav className={`absolute bottom-0 left-0 right-0 w-full bg-(--nav-bar-color) border-(--nav-bar-color) rounded-t-lg h-12`}>
+          <nav className={`fixed bottom-0 left-0 right-0 w-full bg-(--nav-bar-color) border-(--nav-bar-color) rounded-t-lg h-12`}>
               <div className={`mt-1 flex justify-evenly`}>
                   <Link href="/overview"
                       className={`hover:cursor-pointer ${path === "/overview" && "bg-[#F6F4F4] px-4 h-11 rounded-t-lg border-b-[#72090F] border-b-4"}`}>

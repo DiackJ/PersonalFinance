@@ -1,16 +1,19 @@
 {
   "pots" : [
     {
-      "id": "jdsej5tkljtlsjdfojk9ojekl", "title": "savings one", "targetAmount": 200, "totalSaved": 50, "percentSaved": 10
+      "id": "jdsej5tkljtlsjdfojk9ojekl", "title": "savings one", "targetAmount": 200, "totalSaved": 50, "percentSaved": 25
     },
     {
-      "id": "jdsej5tkljtlsjdfojk9ojekl", "title": "savings one", "targetAmount": 200, "totalSaved": 50, "percentSaved": 10
+      "id": "jdsej5tkljtlsjd65fojk9ojekl", "title": "savings one", "targetAmount": 200, "totalSaved": 100, "percentSaved": 50
     },
     {
-      "id": "jdsej5tkljtlsjdfojk9ojekl", "title": "savings one", "targetAmount": 200, "totalSaved": 50, "percentSaved": 10
+      "id": "jdsej5t7657kljtlsjdfojk9ojekl", "title": "savings one", "targetAmount": 200, "totalSaved": 200, "percentSaved": 100
     },
     {
-      "id": "jdsej5tkljtlsjdfojk9ojekl", "title": "savings one", "targetAmount": 200, "totalSaved": 50, "percentSaved": 10
+      "id": "jdsej5tkl342jtlsjdfojk9ojekl", "title": "savings one", "targetAmount": 200, "totalSaved": 20, "percentSaved": 10
+    },
+    {
+      "id": "jdsej5tkl342jtlsjdfojk7657569ojekl", "title": "savings one", "targetAmount": 200, "totalSaved": 20, "percentSaved": 10
     }
   ]
 }

@@ -57,6 +57,8 @@
     --color-secondary: var(--secondary-text-color);
     --color-grey-one: var(--color-grey-300);
     --color-grey-two: var(--color-grey-100);
+    /*--color-dark-green: var(--nav-bar-color);*/
+    /*--color-light-green: var(--nav-)*/
 }
 
 body {
