@@ -1,13 +1,31 @@
 'use client';
 import MainButton from '@/ui-components/MainButton';
 import data from '@/test-data/pot-test.json';
-//import type { Pot } from '@/types/Pot';
+import type { Pot } from '@/types/Pot';
+import { useState } from 'react';
+import ModalSkeleton from "@/ui-components/ModalSkeleton";
+import AddWithdrawMoney from "@/ui-components/AddWithdrawMoney";
 
 export default function Pot() {
     const pots = data.pots;
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
+    const [moneyAction, setMoneyAction] = useState<string>("");
+    const [currentPot, setCurrentPot] = useState<Pot |  null>(null);
+    const handleModal = () => {
+        setIsModalOpen(prev => !prev);
+    };
+    const handleMoneyAction = (v:string) => {
+        setMoneyAction(v);
+    };
+    const handleCurrentPot = (v:Pot) => {
+        setCurrentPot(v);
+    };
 
     return (
         <div className={`overflow-y-auto scroll-my-1 pb-14`}>
+            <ModalSkeleton closeAction={handleModal} isOpen={isModalOpen}>
+                <AddWithdrawMoney moneyAction={moneyAction} pot={currentPot}/>
+            </ModalSkeleton>
             <div className={`flex justify-between mt-3 md:mt-7 h-fit`}>
                 <h1 className={`text-main text-[32px] font-bold`}>Pots</h1>
                 <div className={``}>
@@ -40,8 +58,8 @@ export default function Pot() {
                             <p>${pot.targetAmount}</p>
                         </div>
                         <div className={`h-fit w-fit space-x-8 md:space-x-10`}>
-                            <button className={`ml-8 md:ml-20 border-grey-two rounded-lg bg-grey-two hover:cursor-pointer hover:bg-(--nav-text-color) transition-all text-main text-[14px] h-fit w-fit p-3`}>+ Add Money</button>
-                            <button className={`border-grey-two rounded-lg bg-grey-two text-main hover:cursor-pointer hover:bg-(--nav-text-color) transition-all text-[14px] h-fit w-fit p-3`}>- Withdraw</button>
+                            <button className={`ml-8 md:ml-20 border-grey-two rounded-lg bg-grey-two hover:cursor-pointer hover:bg-(--nav-text-color) transition-all text-main text-[14px] h-fit w-fit p-3`} onClick={() => {handleModal(); handleMoneyAction("add"); handleCurrentPot(pot);}}>+ Add Money</button>
+                            <button className={`border-grey-two rounded-lg bg-grey-two text-main hover:cursor-pointer hover:bg-(--nav-text-color) transition-all text-[14px] h-fit w-fit p-3`} onClick={() => {handleModal(); handleMoneyAction("withdraw"); handleCurrentPot(pot);}}>- Withdraw</button>
                         </div>
                     </div>
                 ))}

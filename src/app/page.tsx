@@ -1,6 +1,5 @@
  'use client';
- import { useEffect, useState } from 'react';
- import ModalSkeleton from "@/ui-components/ModalSkeleton";
+ //import { useEffect, useState } from 'react';
 
  export default function Test() {
    // const [mssg, setMssg] = useState<String>('');
@@ -21,6 +20,7 @@
    //   fd();
    // }, []);
 
-   return <ModalSkeleton>dskljfksdfjlsdjkfjsd</ModalSkeleton>
 
+   // return (
+   // )
  }
