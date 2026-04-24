@@ -1,0 +1,9 @@
+CREATE TABLE users (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    email TEXT NOT NULL UNIQUE,
+    password_hash TEXT NOT NULL,
+    join_date DATE DEFAULT NOW(),
+    income REAL DEFAULT 0,
+    current_balance REAL DEFAULT 0,
+    expenses REAL DEFAULT 0
+);

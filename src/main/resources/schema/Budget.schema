@@ -1,0 +1,9 @@
+CREATE TABLE budget (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    user_id UUID NOT NULL,
+    budget_title TEXT NOT NULL,
+    theme_color TEXT NOT NULL,
+    max_spend REAL NOT NULL,
+    spent REAL DEFAULT 0.00,
+    FOREIGN KEY (user_id) REFERENCES uses(id) ON DELETE CASCADE
+);

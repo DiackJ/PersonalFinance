@@ -1,0 +1,11 @@
+CREATE TABLE bill (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    user_id UUID NOT NULL,
+    bill_title TEXT NOT NULL,
+    amount_due REAL NOT NULL,
+    category TEXT DEFAULT 'bill',
+    is_paid BOOLEAN DEFAULT FALSE,
+    frequency TEXT NOT NULL,
+    date INT NOT NULL,
+    FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE
+);
