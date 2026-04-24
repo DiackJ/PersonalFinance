@@ -1,6 +1,7 @@
 package pf_backend.Entity;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import lombok.Data;
@@ -13,6 +14,7 @@ import java.util.UUID;
 @Data
 public class Users {
     @Id
+    @GeneratedValue
     private UUID id;
     private String email;
     private String passwordHash;

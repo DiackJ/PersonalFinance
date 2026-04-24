@@ -1,7 +1,11 @@
 package pf_backend.Repository;
 
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import pf_backend.Entity.Users;
 
-@Repository
-public class UsersRepository {
+import java.util.Optional;
+import java.util.UUID;
+
+public interface UsersRepository extends JpaRepository<Users, UUID> {
+    Optional<Users> findByEmail(String email);
 }
